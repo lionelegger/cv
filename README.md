@@ -1,2 +1,2 @@
-# Leng Lam
-This is the website for Leng Lam
+# Curriculum Vitae
+Simple webpage for a cv
