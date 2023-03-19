@@ -1,0 +1,15 @@
+$md: 768px;
+$link-color: purple;
+$padding-md: 2em;
+
+// Navigation
+$nav-width: 100px;
+$nav-background-color: lightgray;
+
+// A map of breakpoints.
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
