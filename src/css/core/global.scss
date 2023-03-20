@@ -1,0 +1,29 @@
+body {
+  color: var(--color-dark);
+  background: var(--color-light);
+  font-size: var(--step-0);
+  font-family: var(--font-base);
+  line-height: 1.4;
+  letter-spacing: var(--tracking);
+}
+
+.u-container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.u-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
+
+svg {
+  height: 2ex;
+  width: auto;
+  flex: none;
+}
+
+[role='list'] {
+  padding: 0;
+}

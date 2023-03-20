@@ -1,14 +1,52 @@
-body {
-  font-family: 'Asap';
-  font-weight: 200;
-  font-size: 1.2rem;
+// Headings
+h1, h2, h3 {
+  line-height: 1;
+  letter-spacing: var(--tracking-s);
+  max-width: 20ch;
 }
 
 h1 {
-  font-weight: 700;
+  font-size: var(--step-5);
+}
+h2 {
+  font-size: var(--step-4);
+}
+h3 {
+  font-size: var(--step-3);
 }
 
+p, li, blockquote:not([class]) {
+  max-width: var(--max-characters);
+}
+
+// Links
 a {
-  color: $link-color;
+  color: var(--color-link);
   text-decoration: none;
 }
+
+a:hover {
+  text-decoration: none;
+}
+
+:focus {
+  outline: 2px solid;
+  outline-offset: 0.3ch;
+}
+
+:target {
+  scroll-margin-top: 2ex;
+}
+
+// Blockquote
+blockquote:not([class]) {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  p:last-of-type {
+    font-family: var(--font-base);
+    font-size: var(--step-1);
+    font-weight: normal;
+  }
+}
+
+

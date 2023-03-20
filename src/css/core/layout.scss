@@ -1,14 +1,10 @@
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
 
 header {
-  color: white;
+  color: var(--color-light);
   position: fixed;
   left: 0;
   bottom: 0;
-  width: $nav-width;
+  width: var(--space-xl-2xl);
   height: 100vh;
   z-index: 10;
 
@@ -16,16 +12,11 @@ header {
     position: absolute;
     top: 0;
     padding: 20px 0;
-    width: $nav-width;
-    font-size: 2em;
+    width: var(--space-xl-2xl);
+    font-size: var(--step-4);
     font-weight: 700;
     z-index: 12;
     text-align: center;
-  }
-
-  // Phone
-  @media only screen and (max-width: $md) {
-    
   }
 }
 
@@ -35,7 +26,7 @@ nav.nav-container {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: $nav-background-color;
+  background-color: var(--navigation-color);
   
   ul.nav-menu {
     position: absolute;
@@ -45,13 +36,12 @@ nav.nav-container {
     float: none;
     transform: rotate(-90deg);
     display: flex;
-    gap: 2rem;
+    gap: var(--space-m-l);
     justify-content: center;
 
     li.nav-item {
       list-style-type: none;
-      transition: opacity .3s ease;
-      font-size: .8em;
+      font-size: var(--step-0);
       font-weight: 500;
       text-transform: uppercase;
       cursor: pointer;
@@ -59,21 +49,66 @@ nav.nav-container {
     }
   }
 
-  // Phone
-  @media only screen and (max-width: $md) {
-    
-  }
 }
 
 main {
-  margin-left: $nav-width;
-  padding: $padding-md;
+  margin-left: var(--space-xl-2xl);
+  padding: var(--space-m-l);
+}
 
-  // Phone
-  @media only screen and (max-width: $md) {
-    
-  }
+// Add a .flow class to space correctly the children elements
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
 
+section {
+  padding-top: var(--section-space, var(--space-s-l));
+  padding-bottom: var(--section-space, var(--space-s-l));
+}
+
+// GRID
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--grid-placement, auto-fill),
+    minmax(var(--grid-min-item-size, 16rem), 1fr)
+  );
+  gap: var(--grid-gutter, var(--space-s-l))
+}
+// GRID 2 columns
+.grid[data-layout='50-50'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 50vw, 24rem);
+}
+// GRID 3 columns
+.grid[data-layout='33-33-33'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 33%, 20rem);
+  --gutter: var(--space-l-xl);
+  --flow-space: var(--space-s);
+}
+// GRID masonry
+.grid[data-rows='masonry'] {
+  grid-template-rows: masonry;
+  align-items: start;
+}
+
+.card {
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: var(--space-m-l);
+  border-radius: var(--border-radius);
+  max-width: unset;
+  text-align: center;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(,85rem);
+  padding-left: var(--size-gutter);
+  padding-right: var(--size-gutter);
+  position: relative;
 }
 
 footer {
@@ -81,8 +116,4 @@ footer {
   bottom: 0;
   width: 100%;
   height: 50px;
-}
-
-.container {
-  max-width: 66ch;
 }
