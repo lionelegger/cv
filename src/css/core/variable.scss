@@ -5,20 +5,16 @@
   --font-base: 'Asap';
   --tracking: -0.005rem;
   --tracking-s: -0.001rem;
-  --max-characters: 66ch;
+  --max-characters: 77.50ch;
 
   // COLORS
   --color-link: purple;
   --color-light: white;
-  --color-dark: black;
-  --color-nav: lightgray;
-
-  // VIEWPORT SIZES
-  --viewport-md: 768px;
+  --color-dark: #333;
 
   // NAVIGATION
-  --navigation-width: 100px;
-  --navigation-color: lightgray;
+  --color-nav: lightgray;
+  --color-nav-link: gray;
 
   // TYPE (utopia.fyi)
   /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -63,7 +59,7 @@
   --grid-columns: 12;
 
   // OTHER SPACES
-  --section-space: 5rem;
+  --section-space: 10rem;
   --flow-space: 1.5rem;
   --wrapper-max-width: 55rem;
 
@@ -71,3 +67,10 @@
   --border-radius: 1rem;
 
 }
+
+// SASS variables
+
+// RESPONSIVE
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 900px;
+$breakpoint-desktop: 1200px;

@@ -1,0 +1,51 @@
+header {
+  color: var(--color-light);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: var(--space-xl-2xl);
+  height: 100vh;
+  z-index: 10;
+
+  .logo {
+    position: absolute;
+    top: 0;
+    padding: 20px 0;
+    width: var(--space-xl-2xl);
+    font-size: var(--step-4);
+    font-weight: 700;
+    z-index: 12;
+    text-align: center;
+  }
+}
+
+// inspired by https://www.blaiseposmyouck.com/
+
+nav.nav-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-nav);
+  
+  ul.nav-menu {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    float: none;
+    transform: rotate(-90deg);
+    display: flex;
+    gap: var(--space-m-l);
+    justify-content: center;
+
+    li.nav-item {
+      list-style-type: none;
+      font-size: var(--step-0);
+      font-weight: 500;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+  }
+
+}

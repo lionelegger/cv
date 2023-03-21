@@ -3,6 +3,7 @@ h1, h2, h3 {
   line-height: 1;
   letter-spacing: var(--tracking-s);
   max-width: 20ch;
+  font-weight: 400;
 }
 
 h1 {
@@ -22,7 +23,7 @@ p, li, blockquote:not([class]) {
 // Links
 a {
   color: var(--color-link);
-  text-decoration: none;
+  // text-decoration: none;
 }
 
 a:hover {
