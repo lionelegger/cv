@@ -2,7 +2,6 @@
 h1, h2, h3 {
   line-height: 1;
   letter-spacing: var(--tracking-s);
-  max-width: 20ch;
   font-weight: 400;
 }
 
@@ -13,7 +12,7 @@ h2 {
   font-size: var(--step-4);
 }
 h3 {
-  font-size: var(--step-3);
+  font-size: var(--step-2);
 }
 
 p, li, blockquote:not([class]) {
@@ -52,7 +51,27 @@ blockquote:not([class]) {
 
 // Lead
 .lead {
-  font-size: larger;
+  font-size: var(--step-1);
+}
+.introduction {
+  font-size: var(--step-2);
+  opacity: 0.5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Responsive 
+.phone-only {
+  @media only screen and (min-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+.desktop-only {
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
 }
 
 
