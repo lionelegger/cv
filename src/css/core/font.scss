@@ -1,18 +1,24 @@
+:root { font-family: var(--font-base); }
+@supports (font-variation-settings: normal) {
+  :root { font-family: var(--font-base); }
+}
+
 // Headings
 h1, h2, h3 {
   line-height: 1;
-  letter-spacing: var(--tracking-s);
-  font-weight: 400;
 }
 
 h1 {
   font-size: var(--step-5);
+  font-weight: 900;
 }
 h2 {
   font-size: var(--step-4);
+  font-weight: 800;
 }
 h3 {
-  font-size: var(--step-2);
+  font-size: var(--step-3);
+  font-weight: 700;
 }
 
 p, li, blockquote:not([class]) {

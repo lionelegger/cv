@@ -2,7 +2,7 @@
 
 :root {
   // FONT
-  --font-base: 'Asap';
+  --font-base: 'Inter', sans-serif;
   --tracking: -0.005rem;
   --tracking-s: -0.001rem;
   --max-characters: 66ch;
@@ -15,6 +15,12 @@
   // NAVIGATION
   --color-nav: lightgray;
   --color-nav-link: white;
+
+  // TIMELINE
+  --color-timeline-line: #c1c1c1;
+  --color-timeline-icon: #333;
+  --dot-timeline-size: 2rem;
+  --line-timeline-size: 0.2rem;
 
   // TYPE (utopia.fyi)
   // * @link https://utopia.fyi/type/calculator?c=320,20,1.2,1600,24,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */  --step--2: clamp(0.67rem, calc(0.92rem + -0.25vw), 0.87rem);

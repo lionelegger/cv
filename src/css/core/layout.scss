@@ -55,6 +55,7 @@ section {
   );
   gap: var(--grid-gutter, var(--space-s-l));
   margin-top: clamp(2rem,1.46rem + 2.72vw,3.75rem);
+  margin-bottom: clamp(2rem,1.46rem + 2.72vw,3.75rem);
 }
 // GRID 2 columns
 .grid[data-layout='2cols'] {
@@ -87,7 +88,7 @@ section {
   background-color: rgb(251, 251, 251);
   box-shadow: 0px 0px 10px 1px rgba(133,133,133,0.25);
   .title {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     position: relative;
     padding-top: var(--space-m-l);
     padding-inline: var(--space-m-l);
@@ -113,7 +114,6 @@ section {
   color: var(--color-light);
   background-image: linear-gradient( 68.3deg, rgba(245,177,97,1) 0.4%, rgba(236,54,110,1) 100.2% );
 }
-
 
 
 // SECTION DIVIDERS (https://www.shapedivider.app/)
@@ -155,4 +155,61 @@ section {
     fill: var(--card-bg-color);
   }
 }
+
+// Diploma
+ul.timeline {
+  padding-left: 0;
+  li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 10% var(--space-s-m) auto;
+    column-gap: var(--space-xs-s);
+    
+    &:not(:first-child) {
+      padding-top: var(--space-s-m);
+    }
+  }
+  .icon {
+    text-align: center;
+    position: relative;
+    color: var(--color-timeline-icon);
+    padding-top: 5px;
+
+    &:before {
+      // Dot
+      content: '';
+      height: var(--space-s-m);
+      width: var(--space-s-m);
+      background-color: var(--color-light);
+      border-radius: 50%;
+      display: block;
+      border: var(--line-timeline-size) solid var(--color-timeline-line);
+      margin: 0 auto;
+    }
+    &:after {
+      // Line
+      content: '';
+      height: 100%;
+      width: var(--line-timeline-size);
+      background-color: var(--color-timeline-line);
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .title {
+    font-size: var(--step-1);
+  }
+  .org {
+    display: inline-block;
+    font-size: var(--step-0);
+  }
+  .date {
+    text-align: right;
+    color: gray;
+    font-size: 1rem;
+    padding-top: calc(var(--space-3xs-2xs) / 1.1);
+  }
+}
+
+
 
